@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Asber &amp; Jennifer — Wedding Invitation</title>
+  <meta name="description" content="You are cordially invited to the wedding of Asber &amp; Jennifer on Saturday, 2 January 2027 at 11:30 AM, Parappan Square International Convention Centre, Venniyur, Malappuram.">
+  <meta name="theme-color" content="#392B20">
+
+  <!-- Social preview -->
+  <link rel="canonical" href="https://asber-jennifer.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://asber-jennifer.vercel.app/">
+  <meta property="og:title" content="Asber &amp; Jennifer — Wedding Invitation">
+  <meta property="og:description" content="Saturday, 2 January 2027 · 11:30 AM · Parappan Square International Convention Centre, Venniyur, Malappuram">
+  <meta property="og:image" content="https://asber-jennifer.vercel.app/assets/og-invitation.jpg">
+  <meta property="og:image:width" content="1672">
+  <meta property="og:image:height" content="941">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://asber-jennifer.vercel.app/assets/og-invitation.jpg">
+
+  <link rel="preload" as="image" href="assets/opening-bg.webp" type="image/webp">
+  <link rel="preload" as="image" href="assets/countryside.webp" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ SCENE 1 — CINEMATIC OPENING ============ -->
+  <div class="intro" id="intro" role="dialog" aria-modal="true" aria-label="Wedding invitation opening">
+    <div class="intro__scene">
+      <img class="intro__backdrop" src="assets/opening-bg.webp" alt="" aria-hidden="true" width="963" height="1633">
+      <div class="intro__stage" id="introFrame" data-fit data-fit-max="1">
+        <img class="intro__art" src="assets/opening-bg.webp" alt="" width="963" height="1633" fetchpriority="high">
+        <div class="fit-box">
+          <div class="fit-content intro__content">
+            <p class="intro__label">The Wedding of</p>
+            <p class="intro__names" aria-label="Asber and Jennifer">
+              <span>Asber</span>
+              <span class="amp" aria-hidden="true">&amp;</span>
+              <span>Jennifer</span>
+            </p>
+            <button type="button" class="intro__enter" id="enterBtn">Open</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="top">
+
+    <!-- ============ SCENE 2 — MAIN HERO + MUSIC PLAYER ============ -->
+    <section class="hero" id="home" aria-labelledby="heroTitle">
+      <div class="bg" aria-hidden="true">
+        <img src="assets/countryside.webp" alt="" width="1672" height="941">
+      </div>
+      <div class="hero__veil" aria-hidden="true"></div>
+
+      <div class="hero__inner">
+        <p class="label hero__label">The Wedding of</p>
+        <h1 class="names hero__names" id="heroTitle">
+          <span class="n">Asber</span>
+          <span class="amp" aria-hidden="true">&amp;</span>
+          <span class="n">Jennifer</span>
+        </h1>
+        <p class="hero__date"><time datetime="2027-01-02">Saturday, 2 January 2027</time></p>
+
+        <div class="hero__stage">
+          <img class="hero__mansion" src="assets/mansion.png" alt="Decorative illustration of an ornate Baroque mansion" width="1000" height="808">
+
+          <div class="player">
+            <svg class="tonearm" id="tonearm" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+              <circle cx="84" cy="12" r="8" fill="#B89B6A" stroke="#392B20" stroke-width="1.5"/>
+              <path d="M84 12 L74 52 L58 76" fill="none" stroke="#E9D6B0" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="49" y="72" width="14" height="8" rx="2" transform="rotate(-30 56 76)" fill="#B89B6A" stroke="#392B20" stroke-width="1.2"/>
+            </svg>
+            <button type="button" class="vinyl" id="musicBtn" aria-pressed="false" aria-label="Play wedding music">
+              <img class="vinyl__disc" src="assets/vinyl-record.png" alt="" width="640" height="632">
+              <span class="vinyl__icon" aria-hidden="true">
+                <svg class="i-play" viewBox="0 0 24 24" focusable="false"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>
+                <svg class="i-pause" viewBox="0 0 24 24" focusable="false"><path d="M7 5h3.6v14H7zM13.4 5H17v14h-3.6z" fill="currentColor"/></svg>
+              </span>
+            </button>
+            <p class="player__note" id="musicNote" role="status" aria-live="polite"></p>
+          </div>
+        </div>
+      </div>
+      <a class="hero__scroll" href="#countdown" aria-label="Scroll down to the countdown">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 9l7 7 7-7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <audio id="bgm" loop preload="none" src="assets/wedding-music.mp3"></audio>
+    </section>
+
+    <!-- ============ SCENE 3 — COUNTDOWN ============ -->
+    <section class="count" id="countdown" aria-labelledby="countTitle">
+      <img class="count__divider" src="assets/gold-divider.png" alt="" width="1400" height="178" loading="lazy" data-reveal>
+      <h2 class="script-h" id="countTitle" data-reveal>Counting Days</h2>
+      <div class="count__grid" id="countGrid" role="timer" aria-label="Time remaining until the wedding" data-reveal>
+        <div class="unit"><span class="num" id="cdDays">00</span><span class="cap">Days</span></div>
+        <span class="sep" aria-hidden="true">:</span>
+        <div class="unit"><span class="num" id="cdHours">00</span><span class="cap">Hours</span></div>
+        <span class="sep" aria-hidden="true">:</span>
+        <div class="unit"><span class="num" id="cdMinutes">00</span><span class="cap">Minutes</span></div>
+        <span class="sep" aria-hidden="true">:</span>
+        <div class="unit"><span class="num" id="cdSeconds">00</span><span class="cap">Seconds</span></div>
+      </div>
+      <p class="count__done" id="countDone" hidden>The celebration has begun. Thank you for your prayers and blessings.</p>
+    </section>
+
+    <!-- ============ SCENE 4 — FORMAL WEDDING INVITATION ============ -->
+    <section class="invite" id="invitation" aria-labelledby="inviteTitle">
+      <img class="invite__backdrop" src="assets/invitation-bg.webp" alt="" aria-hidden="true" width="941" height="1672" loading="lazy">
+
+      <article class="invite__card" id="inviteCard" data-fit>
+        <img class="invite__art" src="assets/invitation-bg.webp" alt="" width="941" height="1672" loading="lazy">
+        <div class="fit-box">
+          <div class="fit-content invite__content">
+            <h2 class="il il-bismillah" id="inviteTitle">In the name of Allah, the Most Gracious, the Most Merciful.</h2>
+
+            <div class="il il-parents">
+              <p>Dr. Mohammed Saleem K.</p>
+              <p class="and" aria-hidden="true">&amp;</p>
+              <p>Dr. Fathimathul Zohara K.</p>
+            </div>
+
+            <img class="il il-rule" src="assets/gold-divider.png" alt="" width="1400" height="178" loading="lazy">
+
+            <p class="il il-wording">Together with their family, we cordially invite you to celebrate the wedding of their beloved son.</p>
+
+            <p class="il il-names" aria-label="Asber and Jennifer">
+              <span>Asber</span>
+              <span class="amp" aria-hidden="true">&amp;</span>
+              <span>Jennifer</span>
+            </p>
+
+            <p class="il il-parentsbride">D/O: Mr. Abdul Majeed Kanhirandy <span class="amp-s">&amp;</span> Mrs. Saira Aboobacker</p>
+
+            <img class="il il-rule" src="assets/gold-divider.png" alt="" width="1400" height="178" loading="lazy">
+
+            <p class="il il-date">
+              <span class="day">Saturday</span>
+              <time datetime="2027-01-02T11:30:00+05:30">2 January 2027</time>
+            </p>
+            <p class="il il-time">11:30 AM</p>
+
+            <img class="il il-rule" src="assets/gold-divider.png" alt="" width="1400" height="178" loading="lazy">
+
+            <address class="il il-venue">
+              <span class="v-label">Venue</span>
+              <span class="v-name">Parappan Square International Convention Centre,</span>
+              <span class="v-addr">Parapan Square Road, NH 66, Venniyur, Malappuram, Kerala – 676508.</span>
+            </address>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============ SCENE 5 — VENUE DETAILS ============ -->
+    <section class="venue" id="venue" aria-labelledby="venueTitle">
+      <img class="venue__art" src="assets/mansion.png" alt="Decorative illustration of an ornate Baroque building (artwork, not a photograph of the venue)" width="1000" height="808" loading="lazy" data-venue-art>
+      <h2 class="script-h" id="venueTitle" data-reveal>Wedding Venue</h2>
+      <p class="venue__name" data-reveal>Parappan Square International Convention Centre</p>
+      <address class="venue__addr" data-reveal>Parapan Square Road, NH 66, Venniyur,<br>Malappuram, Kerala – 676508</address>
+      <a class="btn btn--gold" id="mapBtn" data-reveal target="_blank" rel="noopener noreferrer"
+         href="https://www.google.com/maps/search/?api=1&amp;query=Parappan%20Square%20International%20Convention%20Centre%2C%20Parapan%20Square%20Road%2C%20NH%2066%2C%20Venniyur%2C%20Malappuram%2C%20Kerala%20676508">View Location</a>
+    </section>
+
+    <!-- ============ SCENE 6 — EVENT TIMELINE ============ -->
+    <section class="flow" id="events" aria-labelledby="flowTitle">
+      <div class="bg" aria-hidden="true">
+        <img src="assets/countryside.webp" alt="" width="1672" height="941" loading="lazy">
+      </div>
+      <div class="flow__veil" aria-hidden="true"></div>
+
+      <div class="flow__inner">
+        <h2 class="script-h script-h--dark" id="flowTitle" data-reveal>Event Flow</h2>
+
+        <ol class="timeline" id="timeline">
+          <li class="tl-orn tl-orn--top" aria-hidden="true">
+            <img src="assets/botanical-vine.png" alt="" width="530" height="1536" loading="lazy">
+          </li>
+          <li class="tl-item">
+            <span class="tl-dot" aria-hidden="true"></span>
+            <div class="tl-text">
+              <p class="tl-time">11:30 AM</p>
+              <h3 class="tl-title">Nikah Ceremony</h3>
+              <p class="tl-date">Saturday, 2 January 2027</p>
+              <p class="tl-place">Parappan Square International Convention Centre</p>
+            </div>
+            <div class="tl-art">
+              <img src="assets/mosque.png" alt="Decorative illustration of a mosque with botanical flourishes" width="820" height="847" loading="lazy">
+            </div>
+          </li>
+          <li class="tl-orn tl-orn--bottom" aria-hidden="true">
+            <img src="assets/botanical-vine.png" alt="" width="530" height="1536" loading="lazy">
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ SCENE 7 — WEDDING BLESSING ============ -->
+    <section class="blessing" id="blessing" aria-label="Wedding blessing">
+      <img class="blessing__orn" src="assets/gold-emblem.png" alt="" width="560" height="446" loading="lazy" data-reveal>
+      <blockquote class="blessing__quote" data-reveal>
+        <p>May Allah bless you, and bless your union, and bring you together in goodness.</p>
+      </blockquote>
+      <p class="blessing__from" data-reveal>
+        <span class="blessing__lead">With Duas, Love &amp; Blessings</span>
+        <span class="blessing__names">Safa, Adam, Moideen and the Entire Family</span>
+      </p>
+    </section>
+
+    <!-- ============ SCENE 8 — SAVE THE DATE / RSVP / FOOTER ============ -->
+    <section class="closing" id="rsvp" aria-labelledby="stdTitle">
+      <div class="bg" aria-hidden="true">
+        <img src="assets/countryside.webp" alt="" width="1672" height="941" loading="lazy">
+      </div>
+      <div class="closing__veil" aria-hidden="true"></div>
+
+      <div class="closing__inner">
+        <h2 class="label label--lg" id="stdTitle" data-reveal>Save the Date</h2>
+        <p class="names closing__names" data-reveal aria-label="Asber and Jennifer">
+          <span class="n">Asber</span>
+          <span class="amp" aria-hidden="true">&amp;</span>
+          <span class="n">Jennifer</span>
+        </p>
+        <p class="closing__date" data-reveal><time datetime="2027-01-02">Saturday, 2 January 2027</time></p>
+        <img class="closing__rule" src="assets/gold-divider.png" alt="" width="1400" height="178" loading="lazy" data-reveal>
+
+        <!-- RSVP (disabled for now). To bring it back, remove the comment markers and set CONFIG.rsvpUrl in script.js.
+        <div class="rsvp" data-reveal>
+          <!- - RSVP: set CONFIG.rsvpUrl in script.js to enable. Until then the button stays disabled. - ->
+          <a class="btn btn--dark" id="rsvpBtn" href="#rsvp" aria-disabled="true" tabindex="-1">RSVP</a>
+          <p class="rsvp__note" id="rsvpNote">RSVP details will be shared soon.</p>
+        </div>
+        -->
+
+        <div class="contact" data-reveal>
+          <h3 class="contact__title">Contact</h3>
+          <ul class="contact__list">
+            <li class="contact__item">
+              <span class="contact__num">+91 98461 00134</span>
+              <span class="contact__actions">
+                <a class="btn btn--ghost btn--sm" href="tel:+919846100134">Call</a>
+                <a class="btn btn--ghost btn--sm" href="https://wa.me/919846100134" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              </span>
+            </li>
+            <li class="contact__item">
+              <span class="contact__num">+91 98463 40230</span>
+              <span class="contact__actions">
+                <a class="btn btn--ghost btn--sm" href="tel:+919846340230">Call</a>
+                <a class="btn btn--ghost btn--sm" href="https://wa.me/919846340230" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <button type="button" class="btn btn--dark" id="toTop">Back to Top</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Asber &amp; Jennifer &middot; 2 January 2027</p>
+    <p class="footer__credit">Developed by <a href="http://sahilmuhd.com/" target="_blank" rel="noopener noreferrer">Sahil</a></p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
